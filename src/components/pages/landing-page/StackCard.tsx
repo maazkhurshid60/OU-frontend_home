@@ -1,4 +1,6 @@
 import clsx from "clsx";
+import CardHeading from "@/components/pages/typography/CardHeading";
+import CardDesc from "@/components/pages/typography/CardDesc";
 import type { EcosystemCard } from "@/constant/ecosystemData";
 import { ECOSYSTEM_CARD_GRADIENT } from "@/constant/ecosystemData";
 import type { StackPosition } from "@/hooks/useCardShuffle";
@@ -49,10 +51,8 @@ const StackCard: React.FC<StackCardProps> = ({ card, position, risen, onClick })
         {CARD_ICON_PATHS[card.id]}
       </svg>
     </div>
-    <h3 className="mb-2.5 font-heading text-[length:clamp(1.15rem,0.9rem+0.9vw,1.5rem)] leading-[1.15] font-semibold tracking-[-0.015em] text-white">
-      {card.title}
-    </h3>
-    <p className="text-[13.5px] leading-[1.55] text-white/86">{card.description}</p>
+    <CardHeading className="mb-2.5 text-white">{card.title}</CardHeading>
+    <CardDesc className="text-white/86">{card.description}</CardDesc>
   </article>
 );
 

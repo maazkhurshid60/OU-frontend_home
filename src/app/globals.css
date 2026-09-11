@@ -66,6 +66,27 @@
   }
 }
 
+@utility wrapper {
+  margin: 0 16px;
+
+  @media (min-width: 768px) {
+    margin: 0 32px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -141,8 +162,8 @@ body {
   to { transform: translateX(-50%); }
 }
 @keyframes proofSpin {
-  from { transform: translateY(-50%) rotate(0deg); }
-  to { transform: translateY(-50%) rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 @keyframes livePulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.3); }
@@ -285,8 +306,15 @@ body {
     animation: wIn 0.65s var(--ease) var(--word-delay, 0s) forwards;
   }
   .hero-word-hl {
+    background-image: linear-gradient(135deg, #795cf5 0%, #b11e67 18%, #f95c5b 35%, #9b7bf7 50%, #b11e67 65%, #795cf5 82%, #f95c5b 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     animation:
       wIn 0.65s var(--ease) var(--word-delay, 0s) forwards,
       gradFlow 8s ease-in-out infinite 2.2s;
   }
 }
+

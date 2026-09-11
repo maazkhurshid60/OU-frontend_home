@@ -2,6 +2,7 @@
 
 import { useStickyCardStack } from "@/hooks/useStickyCardStack";
 import Container from "@/components/Container";
+import MainHeading from "@/components/pages/typography/MainHeading";
 import ProductPanel from "./ProductPanel";
 import { PRODUCT_PANELS } from "@/constant/productsData";
 
@@ -15,11 +16,11 @@ const Products: React.FC = () => {
           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
           Our Products
         </div>
-        <h2 className="font-heading text-[length:var(--fs-display)] leading-[0.98] font-medium tracking-[-0.035em] text-charcoal">
+        <MainHeading>
           Two products.
           <br />
           One universe.
-        </h2>
+        </MainHeading>
       </Container>
 
       <Container className="relative">

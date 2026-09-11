@@ -18,7 +18,7 @@ export interface FooterColumnData {
 }
 
 export const FOOTER_TAGLINE =
-  "Helping service businesses grow with integrated software — CRM, POS, marketing, and operations in one ecosystem.";
+  "Purpose-built software for service industries. One universe, two engines of growth.";
 
 export const FOOTER_COLUMNS: FooterColumnData[] = [
   {
@@ -26,22 +26,22 @@ export const FOOTER_COLUMNS: FooterColumnData[] = [
     links: [
       { label: "Owners Pulse", href: "https://ownerspulse.com", external: true },
       { label: "Owners Inventory", href: "https://ownersinventory.com", external: true },
+      { label: "What is next", href: "#products" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/#about" },
-      { label: "Contact", href: "/#contact" },
-      { label: "Dashboard", href: "https://app.ownersuniverse.com", external: true },
+      { label: "Home", href: "/" },
+      { label: "Why two", href: "#about" },
+      { label: "Get started", href: LOGIN_URL, external: true },
     ],
   },
   {
-    title: "Legal",
+    title: "Resources",
     links: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
-      { label: "Cookie Policy", href: "/cookies" },
+      { label: "Early access", href: REGISTER_URL, external: true },
+      { label: "Contact", href: "#contact" },
     ],
   },
 ];

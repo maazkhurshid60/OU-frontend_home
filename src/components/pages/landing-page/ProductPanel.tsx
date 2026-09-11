@@ -1,5 +1,6 @@
 import Image from "next/image";
 import clsx from "clsx";
+import CardDesc from "@/components/pages/typography/CardDesc";
 import type { ProductPanelData } from "@/constant/productsData";
 
 const VARIANT_BG: Record<ProductPanelData["variant"], string> = {
@@ -20,9 +21,7 @@ const ProductPanel: React.FC<{ product: ProductPanelData }> = ({ product }) => (
   >
     <div className="relative z-[2]">
       <Image src={product.logo} alt={product.logoAlt} className="mb-[18px] h-[clamp(30px,2.2vw+18px,50px)] w-auto" />
-      <p className="mb-5 max-w-[420px] text-[clamp(13px,0.8rem+0.2vw,15px)] leading-[1.7] text-g600 max-[600px]:mx-auto">
-        {product.description}
-      </p>
+      <CardDesc className="mb-5 max-w-[420px] max-[600px]:mx-auto">{product.description}</CardDesc>
       <ul className="mb-6 flex flex-wrap gap-2 max-[600px]:justify-center">
         {product.features.map((feature) => (
           <li

@@ -1,9 +1,9 @@
+import Paragraph from "@/components/pages/typography/Paragraph";
 import HeroReveal from "./HeroReveal";
 import HeroMeshBackground from "./HeroMeshBackground";
 import HeroTubesCanvas from "./HeroTubesCanvas";
 import HeroHeading from "./HeroHeading";
 import HeroCtas from "./HeroCtas";
-import HeroTrustPills from "./HeroTrustPills";
 import { HERO_SUB } from "@/constant/heroData";
 
 const Hero: React.FC = () => (
@@ -32,11 +32,13 @@ const Hero: React.FC = () => (
 
       <div className="relative z-[4] mt-[clamp(40px,5vw,80px)] flex max-w-[1100px] flex-col items-center px-5 pb-[clamp(20px,2vw,36px)] text-center max-md:mt-0 max-md:pb-5">
         <HeroHeading />
-        <p className="mb-7 max-w-[500px] text-sm leading-[1.7] text-g500 opacity-0 animate-[hUp_0.5s_var(--ease)_forwards] max-md:px-1" style={{ animationDelay: "2s" }}>
+        <Paragraph
+          className="mb-7 max-w-[500px] text-g500 opacity-0 animate-[hUp_0.5s_var(--ease)_forwards] max-md:px-1"
+          style={{ animationDelay: "2s" }}
+        >
           {HERO_SUB}
-        </p>
+        </Paragraph>
         <HeroCtas />
-        <HeroTrustPills />
       </div>
     </section>
   </>

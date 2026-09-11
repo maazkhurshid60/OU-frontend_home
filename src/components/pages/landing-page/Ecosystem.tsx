@@ -2,6 +2,8 @@
 
 import clsx from "clsx";
 import Container from "@/components/Container";
+import SubHeading from "@/components/pages/typography/SubHeading";
+import Paragraph from "@/components/pages/typography/Paragraph";
 import ButtonEcoCta from "./ButtonEcoCta";
 import StackCard from "./StackCard";
 import { useEcosystemReveal } from "@/hooks/useEcosystemReveal";
@@ -32,13 +34,11 @@ const Ecosystem: React.FC = () => {
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
             Why it works
           </div>
-          <h2 className="mb-[22px] font-heading text-[length:clamp(2.2rem,1.3rem+3.5vw,3.8rem)] leading-[1.04] font-bold tracking-[-0.03em] text-charcoal">
-            Everything your business needs, in one ecosystem.
-          </h2>
-          <p className="mb-9 max-w-[460px] text-[length:var(--fs-lead)] leading-[1.65] text-g600 max-[900px]:mx-auto">
+          <SubHeading className="mb-[22px]">Everything your business needs, in one ecosystem.</SubHeading>
+          <Paragraph className="mb-9 max-w-[460px] max-[900px]:mx-auto">
             Every Owners product shares the same login, the same organization, and the same team. Add a new
             product without starting from zero — your setup carries over automatically.
-          </p>
+          </Paragraph>
           <ButtonEcoCta />
         </div>
 

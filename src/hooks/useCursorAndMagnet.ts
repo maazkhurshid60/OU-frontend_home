@@ -6,13 +6,13 @@ import { useEffect } from "react";
  * Delegated global listener (instead of binding to each `.magnet` / `[data-cursor-hover]`
  * element individually) so it keeps working as sections mount client-side across navigation.
  */
-export function useCursorAndMagnet(cursorId: string) {
+export function useCursorAndMagnet(cursorId?: string) {
   useEffect(() => {
     const fine = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!fine || reduced) return;
 
-    const cursor = document.getElementById(cursorId);
+    const cursor = cursorId ? document.getElementById(cursorId) : null;
     let shown = false;
     let hoveredBig: Element | null = null;
     let hoveredMagnet: HTMLElement | null = null;

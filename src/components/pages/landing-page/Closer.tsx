@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Container from "@/components/Container";
+import MainHeading from "@/components/pages/typography/MainHeading";
 import ButtonCloser from "@/components/button/ButtonCloser";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { LOGIN_URL, REGISTER_URL } from "@/constant/navigationData";
@@ -33,15 +34,11 @@ const Closer: React.FC = () => {
       <div aria-hidden style={{ backgroundImage: NOISE_SVG }} className="pointer-events-none absolute inset-0 opacity-35 mix-blend-overlay" />
 
       <Container className="relative z-[2] flex flex-col items-start gap-10">
-        <h2
-          ref={titleRef}
-          style={title.style}
-          className={`${title.className} max-w-[15ch] font-heading text-[length:var(--fs-display)] leading-[0.98] font-medium tracking-[-0.035em] text-white`}
-        >
+        <MainHeading ref={titleRef} style={title.style} className={`${title.className} max-w-[15ch] text-white`}>
           {CLOSER_TITLE_LINE_1}
           <br />
           {CLOSER_TITLE_LINE_2}
-        </h2>
+        </MainHeading>
         <div ref={rowRef} style={row.style} className={`${row.className} flex flex-wrap items-center gap-6`}>
           <ButtonCloser text="Create your account" href={REGISTER_URL} target="_blank" />
           <a
