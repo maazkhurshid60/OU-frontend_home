@@ -42,7 +42,7 @@ const StackCard: React.FC<StackCardProps> = ({ card, position, risen, onClick })
       "stack-card",
       `pos-${position}`,
       risen && "risen",
-      "flex h-[clamp(300px,29vw,380px)] w-[clamp(210px,20vw,270px)] max-[900px]:h-[clamp(230px,60vw,300px)] max-[900px]:w-[clamp(160px,42vw,210px)] cursor-pointer flex-col rounded-[28px] p-[clamp(24px,2.4vw,32px)] shadow-[0_30px_60px_-20px_rgba(20,10,40,.28)] max-[900px]:p-5",
+      "flex h-[clamp(300px,29vw,380px)] w-[clamp(210px,20vw,270px)] max-[900px]:h-auto max-[900px]:min-h-[230px] max-[900px]:w-[clamp(160px,42vw,210px)] cursor-pointer flex-col rounded-[28px] p-[clamp(24px,2.4vw,32px)] shadow-[0_30px_60px_-20px_rgba(20,10,40,.28)] max-[900px]:p-4",
       ECOSYSTEM_CARD_GRADIENT[card.id]
     )}
   >
@@ -51,8 +51,8 @@ const StackCard: React.FC<StackCardProps> = ({ card, position, risen, onClick })
         {CARD_ICON_PATHS[card.id]}
       </svg>
     </div>
-    <CardHeading className="mb-2.5 text-white">{card.title}</CardHeading>
-    <CardDesc className="text-white/86">{card.description}</CardDesc>
+    <CardHeading className="mb-2.5 text-white max-[900px]:text-base">{card.title}</CardHeading>
+    <CardDesc className="text-white/86 max-[900px]:text-xs">{card.description}</CardDesc>
   </article>
 );
 

@@ -7,8 +7,8 @@ import { FOOTER_COLUMNS } from "@/constant/navigationData";
 import footerLogo from "../../../../public/assets/footer-logo.webp";
 
 const Footer: React.FC = () => (
-  <div className="bg-white p-6">
-    <footer className="relative overflow-hidden rounded-[16px] bg-[#FAFAFA]">
+  <div className="bg-white p-0 sm:p-6">
+    <footer className="relative overflow-hidden rounded-none bg-[#FAFAFA] sm:rounded-[16px]">
       {/* Ambient Glow Ellipses */}
       <div
         aria-hidden
