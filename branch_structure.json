@@ -1,0 +1,15 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "haider-dev",
+    "main"
+  ],
+  "parent": {
+    "haider-dev": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "haider-dev"
+  ]
+}
