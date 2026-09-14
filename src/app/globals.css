@@ -184,6 +184,8 @@ body {
     --fan-x: 80px;
   }
 }
+
+
 @media (min-width: 481px) and (max-width: 900px) {
   .stack-wrap {
     --fan-x: 108px;
